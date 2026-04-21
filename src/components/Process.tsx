@@ -53,7 +53,6 @@ export default function Process() {
               transition={{ delay: 0.2 }}
               className="text-4xl md:text-7xl font-black font-display tracking-tighter leading-[1.1]"
             >
-              <span className="text-sm font-bold tracking-[0.2em] mb-4 block text-secondary uppercase italic">릴봄 스튜디오 (Reelbom studio)</span>
               더 스마트한 프로세스, <br /> 
               <span className="text-primary italic">더 빠른 결과!</span>
             </motion.h2>

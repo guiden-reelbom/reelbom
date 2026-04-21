@@ -120,7 +120,7 @@ export default function ContactForm() {
             <span className="text-xl md:text-3xl text-gray-500 font-bold">(Apply for Free)</span>
           </motion.h2>
           <p className="text-gray-400 text-lg mb-12 max-w-md break-keep">
-            계정 진단부터 영상 제작까지, 가이든의 전문가들이 당신의 브랜드에 가장 필요한 해답을 제안해 드립니다.
+            계정 진단부터 영상 제작까지, 릴봄의 전문가들이 당신의 브랜드에 가장 필요한 해답을 제안해 드립니다.
           </p>
 
           <div className="space-y-6">
@@ -161,7 +161,7 @@ export default function ContactForm() {
                 <CheckCircle2 className="w-12 h-12 text-secondary" />
               </div>
               <h3 className="text-4xl font-black mb-6 tracking-tight bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">신청이 완료되었습니다!</h3>
-              <p className="text-gray-400 text-lg mb-10">가이든의 전문가가 확인 후 <br/> 빠른 시일 내에 연락드리겠습니다.</p>
+              <p className="text-gray-400 text-lg mb-10">릴봄의 전문가가 확인 후 <br/> 빠른 시일 내에 연락드리겠습니다.</p>
               <button 
                 onClick={() => setIsSubmitted(false)}
                 className="px-8 py-3 glass rounded-full text-secondary font-bold hover:bg-secondary hover:text-white transition-all transform hover:scale-105"

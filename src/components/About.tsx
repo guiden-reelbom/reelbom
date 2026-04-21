@@ -25,8 +25,8 @@ export default function About() {
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl" />
           
           <div className="absolute bottom-10 left-10 right-10 glass p-8 rounded-3xl z-20">
-            <h3 className="text-2xl font-black mb-2 italic">선구적 콘텐츠 (Visionary Content)</h3>
-            <p className="text-sm font-bold text-white leading-relaxed drop-shadow-md">우리는 단순한 영상을 넘어 브랜드를 성장시키는 바이럴 스토리를 설계합니다.</p>
+            <h3 className="text-2xl font-black mb-2 italic">시선의 가치 (Visual Value)</h3>
+            <p className="text-sm font-bold text-white leading-relaxed drop-shadow-md">"당신의 가치가 비로소 보이기 시작하는 순간, 릴봄"</p>
           </div>
         </motion.div>
 
@@ -38,7 +38,7 @@ export default function About() {
               viewport={{ once: true }}
               className="text-secondary font-bold tracking-[0.4em] uppercase mb-4"
             >
-              ✨ 브랜드 스토리 (Brand Story)
+              ✨ 릴봄 브랜드 스토리 (Reelbom Story)
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -47,15 +47,15 @@ export default function About() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-6xl font-black font-display tracking-tighter leading-[1.1] mb-8"
             >
-              성공을 실현하는 <br />
-              <span className="text-primary italic">전략적 나침반, 가이든</span>
+              사람들의 시선이 <br />
+              <span className="text-primary italic">머무는 순간, 릴봄</span>
             </motion.h2>
             <p className="text-gray-400 text-lg leading-relaxed space-y-4 break-keep">
               <span className="block">
-                <strong>가이든(Guiden)</strong>은 <strong>'Guide + en'</strong>의 결합으로, 단순한 안내를 넘어 브랜드의 성공을 가능하게 하고(Enable) 확장(Expand)한다는 실행력을 의미합니다.
+                <strong>릴봄(Reelbom)</strong>은 숏폼의 <strong>'Reel'</strong>과 시선의 <strong>'봄'</strong>, 그리고 도약의 계절 <strong>'봄'</strong>의 결합입니다. 
               </span>
               <span className="block">
-                똑똑한 시스템인 <strong>가이든</strong>이 브랜드의 나침반이 되어 가장 효율적인 성장 경로를 설계하면, 제작팀인 <span className="text-secondary font-bold italic">릴봄 스튜디오 (Reelbom studio)</span>가 사람들의 시선을 사로잡는 강력한 콘텐츠를 완성합니다.
+                숏폼과 광고의 본질은 결국 <strong>'보여주는 것'</strong>입니다. 브랜드의 숨겨진 가치를 제대로 보게 만들고(Vision), 정체된 비즈니스에 가장 빠른 성장세(Spring)를 가져다줍니다.
               </span>
             </p>
           </div>
@@ -63,22 +63,22 @@ export default function About() {
           <div className="grid gap-6">
             {[
               { 
-                icon: Target, 
-                title: '전략적 두뇌 (Strategic Brain)', 
-                desc: '트렌드를 읽고 브랜드가 가장 빠르게 성장할 수 있는 전략을 세웁니다.',
-                descEn: 'Building the most efficient growth strategy by reading trends'
+                icon: Zap, 
+                title: '시각적 가치 (Vision)', 
+                desc: '사람들의 시선이 머무는 콘텐츠로 브랜드의 가치를 선명하게 증명합니다.',
+                descEn: 'Creating the moment your value finally starts to be seen'
               },
               { 
-                icon: Zap, 
-                title: '압도적 실행력 (Strategic Action)', 
-                desc: '상상을 현실로 만드는 릴봄 스튜디오의 강력한 제작 에너지입니다.',
-                descEn: 'Powerful production energy that turns imagination into reality'
+                icon: Target, 
+                title: '시기적 가치 (Spring)', 
+                desc: '얼어붙은 SNS 계정에 새로운 에너지와 도약의 기회를 불어넣습니다.',
+                descEn: 'Bringing the fastest spring and growth to your business'
               },
               { 
                 icon: Users, 
-                title: '성장 파트너 (Growth Partner)', 
-                desc: '단순한 대행을 넘어 브랜드의 성공을 위해 함께 뛰는 파트너입니다.',
-                descEn: 'A partner who runs together for brand success beyond simple agency work'
+                title: '경험적 가치 (Experience)', 
+                desc: '"오, 볼만하네!" 고객이 결과물을 보고 감탄하는 긍정적 경험을 설계합니다.',
+                descEn: 'Designing results that make customers want to see and read more'
               },
             ].map((item, idx) => (
               <motion.div

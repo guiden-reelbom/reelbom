@@ -86,7 +86,7 @@ export default function SocialProof() {
               실제 성과로 증명하는 릴스, 블로그 파트너십 (Reels & Blog Partnerships)
             </p>
             <p className="text-sm font-bold text-gray-400">
-              가이든과 함께 폭발적인 성장을 경험하고 있는 수많은 브랜드들이 있습니다.
+              릴봄과 함께 폭발적인 성장을 경험하고 있는 수많은 브랜드들이 있습니다.
             </p>
           </div>
         </motion.div>

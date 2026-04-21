@@ -41,8 +41,8 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="inline-block px-4 py-1.5 glass rounded-full mb-8 border-primary/20"
         >
-          <span className="text-xs font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-            ✨ 비즈니스의 성공으로 이끄는 단 하나의 길, 가이든
+          <span className="text-xs font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent break-keep text-center">
+            ✨ 정체된 계정에 봄을 피워낸 따뜻한 햇살, 릴봄
           </span>
         </motion.div>
 
@@ -50,11 +50,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black font-display leading-[1.2] tracking-tighter mb-8 px-4"
+          className="text-5xl md:text-7xl lg:text-8xl font-black font-display leading-[1.2] tracking-tighter mb-8 px-4 break-keep"
         >
-          가장 빠르게 <br />
+          숨겨진 잠재력, <br />
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-[gradient_4s_linear_infinite] italic pr-12">
-            성장하다 
+            현실이 되다
           </span>
         </motion.h1>
 
@@ -64,8 +64,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-3xl mx-auto text-base md:text-2xl font-bold text-primary/90 mb-12 px-2 break-keep"
         >
-          당신의 브랜드가 가야 할 단 하나의 길, <br className="hidden md:block" />
-          <span className="text-secondary italic">가장 든든한 마케팅 나침반</span> 가이든입니다.
+          브랜드의 본질을 꿰뚫는 선구적 감각으로 <br className="hidden md:block" />
+          <span className="text-secondary italic">기하급수적 성장</span>을 현실로 구축하는 <span className="font-black text-white">REELBOM</span>입니다.
         </motion.p>
 
         <motion.div

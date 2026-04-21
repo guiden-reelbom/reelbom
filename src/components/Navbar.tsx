@@ -69,47 +69,49 @@ export default function Navbar() {
           className="flex items-center gap-3 group cursor-pointer"
         >
           <div className="relative w-14 h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-            {/* Premium Compass/Navigator Icon */}
+            {/* Reelbom Definitive Logo: Perfectly Centered Lens + Play + Pupil */}
             <svg 
-              viewBox="0 0 24 24" 
-              className="w-10 h-10 drop-shadow-[0_0_15px_rgba(242,107,122,0.5)]" 
+              viewBox="0 0 40 40" 
+              className="w-12 h-12 drop-shadow-[0_0_20px_rgba(242,107,122,0.4)]" 
               fill="none" 
             >
               <defs>
-                <linearGradient id="compassGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="reelbomGradNav" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stopColor="#FB923C" />
-                  <stop offset="50%" stopColor="#F26B7A" />
-                  <stop offset="100%" stopColor="#8B5CF6" />
+                  <stop offset="33%" stopColor="#F26B7A" />
+                  <stop offset="66%" stopColor="#8B5CF6" />
+                  <stop offset="100%" stopColor="#D946EF" />
                 </linearGradient>
               </defs>
               
-              {/* Outer Markers - Light color for dark bg */}
-              <path d="M12 2l1.2 2h-2.4z" fill="white" fillOpacity="0.8" />
-              <path d="M12 22l-1.2-2h2.4z" fill="white" fillOpacity="0.8" />
-              <path d="M22 12l-2 1.2v-2.4z" fill="white" fillOpacity="0.8" />
-              <path d="M2 12l2-1.2v2.4z" fill="white" fillOpacity="0.8" />
-
-              {/* Inner Circle - Semi-transparent white ring */}
-              <circle cx="12" cy="12" r="7.5" stroke="white" strokeWidth="1" strokeOpacity="0.3" />
+              {/* Outer Ring Structure */}
+              <circle cx="20" cy="20" r="16" stroke="white" strokeWidth="1" strokeOpacity="0.1" />
               
-              {/* Needle Rhombus */}
-              <g transform="rotate(45 12 12)">
+              {/* Gradient Arc (12 o'clock to 3 o'clock) */}
+              <path 
+                d="M 20 4 A 16 16 0 0 1 36 20" 
+                stroke="url(#reelbomGradNav)" 
+                strokeWidth="2.8" 
+                strokeLinecap="round" 
+              />
+              
+              {/* Centered Identity Elements */}
+              <g transform="translate(20, 20)">
+                {/* Visual Play Triangle - Perfectly Balanced around 0,0 */}
                 <path 
-                  d="M12 4l3 8-3 8-3-8z" 
-                  fill="url(#compassGradNav)" 
-                  stroke="white" 
-                  strokeWidth="0.5"
+                  d="M -5 -6 C -6.5 -6 -7.5 -5 -7.5 -4 L -7.5 4 C -7.5 5 -6.5 6 -5 6 C -3.5 6 6.5 2 7.5 1 C 8.5 0 8.5 -1 7.5 -2 C 6.5 -3 -3.5 -6 -5 -6 Z" 
+                  fill="url(#reelbomGradNav)" 
                 />
-                {/* Center Hole (White) */}
-                <circle cx="12" cy="12" r="0.75" fill="white" />
+                {/* Central Focus Pupil - Guaranteed Center */}
+                <circle cx="0" cy="0" r="1.5" fill="white" />
               </g>
             </svg>
           </div>
           <div className="flex flex-col">
-            <div className="text-2xl font-black tracking-tighter flex items-center font-display">
-              <span className="text-secondary tracking-widest leading-none">가이든</span>
+            <div className="text-3xl font-black tracking-tighter flex items-center font-display leading-none">
+              <span className="text-secondary tracking-widest leading-none">릴봄</span>
             </div>
-            <span className="text-[10px] font-bold tracking-[0.2em] text-gray-500 group-hover:text-primary transition-colors mt-1 ml-0.5">릴봄 스튜디오 (Reelbom studio)</span>
+            <span className="text-[10px] font-black tracking-[0.2em] text-gray-500 group-hover:text-primary transition-colors mt-1.5 ml-0.5">REELBOM</span>
           </div>
         </Link>
 
