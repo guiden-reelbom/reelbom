@@ -115,7 +115,7 @@ export default function ContactForm() {
             transition={{ delay: 0.2 }}
             className="text-3xl md:text-5xl font-black font-display tracking-tighter mb-8 leading-tight flex flex-col gap-2"
           >
-            <span>지금바로</span>
+            <span>지금 바로</span>
             <span className="text-primary italic">무료 신청하세요!</span>
             <span className="text-xl md:text-3xl text-gray-500 font-bold">(Apply for Free)</span>
           </motion.h2>

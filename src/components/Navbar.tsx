@@ -1,11 +1,41 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Menu, X, Instagram, BookOpen } from 'lucide-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    const targetPath = href.split('#')[0];
+    const hash = href.split('#')[1];
+    const isHomePage = window.location.pathname === '/' || window.location.pathname === '';
+
+    if (isHomePage && hash && targetPath === '/') {
+      e.preventDefault();
+      const element = document.getElementById(hash);
+      if (element) {
+        const offset = 80; // Adjust for navbar height
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+      setIsOpen(false);
+    }
+  };
   
   const backgroundColor = useTransform(
     scrollY,
@@ -35,6 +65,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link 
           to="/"
+          onClick={handleLogoClick}
           className="flex items-center gap-3 group cursor-pointer"
         >
           <div className="relative w-14 h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
@@ -88,6 +119,7 @@ export default function Navbar() {
             <motion.a
               key={link.name}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
@@ -130,7 +162,7 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="flex flex-col items-start"
             >
               <span className="text-lg font-bold hover:text-primary tracking-widest uppercase">

@@ -1,8 +1,16 @@
 import { Github, Instagram, Youtube, BookOpen, Link as LinkIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import React from 'react';
 import { motion } from 'motion/react';
 
 export default function Footer() {
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (window.location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="py-20 px-6 bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto">
@@ -10,7 +18,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link 
               to="/"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              onClick={handleLogoClick}
               className="flex items-center gap-3 mb-6 group cursor-pointer"
             >
           <div className="relative w-14 h-14 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
@@ -66,10 +74,10 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold tracking-[0.3em] uppercase text-white/40 mb-6">탐색</h4>
             <ul className="space-y-4">
-              <li><a href="#about" className="text-gray-400 hover:text-primary transition-colors font-medium">브랜드 스토리</a></li>
-              <li><a href="#process" className="text-gray-400 hover:text-primary transition-colors font-medium">서비스</a></li>
-              <li><a href="#portfolio" className="text-gray-400 hover:text-primary transition-colors font-medium">포트폴리오</a></li>
-              <li><a href="#performance" className="text-gray-400 hover:text-primary transition-colors font-medium">성과지표</a></li>
+              <li><a href="/#about" className="text-gray-400 hover:text-primary transition-colors font-medium">브랜드 스토리</a></li>
+              <li><a href="/#process" className="text-gray-400 hover:text-primary transition-colors font-medium">서비스</a></li>
+              <li><a href="/#portfolio" className="text-gray-400 hover:text-primary transition-colors font-medium">포트폴리오</a></li>
+              <li><a href="/#performance" className="text-gray-400 hover:text-primary transition-colors font-medium">성과지표</a></li>
             </ul>
           </div>
 
