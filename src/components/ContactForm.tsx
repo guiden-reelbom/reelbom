@@ -18,7 +18,7 @@ export default function ContactForm() {
     refUrl: '',
   });
 
-  const purposes = ['릴스/숏폼 대행', '광고 홍보용 숏폼', '기업홍보 영상', '개인소장 영상', '블로그 대행'];
+  const purposes = ['릴스/숏폼 대행', '광고 홍보용 숏폼', '기업홍보 영상', '개인소장 영상', '블로그 대행', '쓰레드 대행'];
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -87,7 +87,7 @@ export default function ContactForm() {
     const current = formData.purpose;
     if (current.includes(p)) {
       setFormData({ ...formData, purpose: current.filter(item => item !== p) });
-    } else if (current.length < 2) {
+    } else if (current.length < 3) {
       setFormData({ ...formData, purpose: [...current, p] });
     }
   };
@@ -216,7 +216,7 @@ export default function ContactForm() {
               </div>
 
               <div className="space-y-4">
-                 <label className="text-xs font-bold tracking-widest uppercase text-primary/70 ml-2 font-display">제작 목적 (최대 2개 선택) <span className="text-secondary">✦</span></label>
+                 <label className="text-xs font-bold tracking-widest uppercase text-primary/70 ml-2 font-display">제작 목적 (최대 3개 선택) <span className="text-secondary">✦</span></label>
                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     {purposes.map(p => (
                       <button
