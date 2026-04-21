@@ -50,7 +50,7 @@ export default function About() {
               성공을 실현하는 <br />
               <span className="text-primary italic">전략적 나침반, 가이든</span>
             </motion.h2>
-            <p className="text-gray-400 text-lg leading-relaxed space-y-4">
+            <p className="text-gray-400 text-lg leading-relaxed space-y-4 break-keep">
               <span className="block">
                 <strong>가이든(Guiden)</strong>은 <strong>'Guide + en'</strong>의 결합으로, 단순한 안내를 넘어 브랜드의 성공을 가능하게 하고(Enable) 확장(Expand)한다는 실행력을 의미합니다.
               </span>

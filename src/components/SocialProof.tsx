@@ -59,9 +59,8 @@ export default function SocialProof() {
             숫자로 증명하는 <br /> 
             <span className="text-primary italic">진짜 성과!</span>
           </h2>
-          <p className="text-gray-400 text-sm md:text-base lg:text-xl max-w-2xl mx-auto text-outline leading-relaxed">
-            매월 1억 회 이상의 누적 조회수를 기록하며 <br className="lg:hidden" /> 
-            기하급수적 성장을 직접 증명하고 있습니다.
+          <p className="text-gray-400 text-sm md:text-base lg:text-xl max-w-3xl mx-auto text-outline leading-relaxed break-keep">
+            매월 1억 회 이상의 누적 조회수를 기록하며 기하급수적 성장을 직접 증명하고 있습니다.
           </p>
         </motion.div>
 

@@ -45,15 +45,15 @@ export default function ContactForm() {
         serviceId,
         templateId,
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          name: formData.name,
+          email: formData.email,
           inflow: formData.inflow,
           purpose: formData.purpose.join(', '),
           subject: formData.subject,
           count: formData.count,
           budget: formData.budget,
           message: formData.message,
-          ref_url: formData.refUrl || '없음',
+          url: formData.refUrl || '없음',
         },
         publicKey
       );
@@ -119,7 +119,7 @@ export default function ContactForm() {
             <span className="text-primary italic">무료 신청하세요!</span>
             <span className="text-xl md:text-3xl text-gray-500 font-bold">(Apply for Free)</span>
           </motion.h2>
-          <p className="text-gray-400 text-lg mb-12 max-w-md">
+          <p className="text-gray-400 text-lg mb-12 max-w-md break-keep">
             계정 진단부터 영상 제작까지, 가이든의 전문가들이 당신의 브랜드에 가장 필요한 해답을 제안해 드립니다.
           </p>
 

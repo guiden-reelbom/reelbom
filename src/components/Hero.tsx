@@ -62,9 +62,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-2xl mx-auto text-base md:text-2xl font-bold text-primary/90 mb-12 px-2"
+          className="max-w-3xl mx-auto text-base md:text-2xl font-bold text-primary/90 mb-12 px-2 break-keep"
         >
-          당신의 브랜드가 가야 할 단 하나의 길, <br className="block" />
+          당신의 브랜드가 가야 할 단 하나의 길, <br className="hidden md:block" />
           <span className="text-secondary italic">가장 든든한 마케팅 나침반</span> 가이든입니다.
         </motion.p>
 

@@ -87,13 +87,13 @@ export default function Process() {
                   <step.icon className={`w-7 h-7 ${idx % 2 === 1 ? 'text-dark' : 'text-primary'}`} />
                 </div>
                 
-                <h3 className="text-xl font-black mb-4 tracking-tight flex items-center gap-3">
+                <h3 className="text-xl font-black mb-4 tracking-tight flex items-center gap-3 break-keep">
                   <span className={`text-sm font-black px-2 py-1 rounded-lg ${
                     idx % 2 === 1 ? 'bg-secondary text-white' : 'bg-secondary/20 text-secondary'
                   }`}>0{idx + 1}</span>
                   {step.title}
                 </h3>
-                <p className={`leading-relaxed text-sm font-bold ${
+                <p className={`leading-relaxed text-sm font-bold break-keep ${
                   idx % 2 === 1 ? 'text-dark' : 'text-primary/80 text-outline'
                 }`}>
                   {step.description}
