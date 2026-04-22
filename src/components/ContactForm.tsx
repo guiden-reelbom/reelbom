@@ -24,21 +24,13 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSending(true);
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    // Hardcoded configuration for production compatibility
+    const serviceId = 'service_so3tlnj';
+    const templateId = 'template_9trrpey';
+    const publicKey = '5ktn5fY6vVZYHI1UA';
 
     if (!serviceId || !templateId || !publicKey) {
-      const missing = [];
-      if (!serviceId) missing.push('VITE_EMAILJS_SERVICE_ID');
-      if (!templateId) missing.push('VITE_EMAILJS_TEMPLATE_ID');
-      if (!publicKey) missing.push('VITE_EMAILJS_PUBLIC_KEY');
-      
-      console.error('EmailJS Configuration Missing:', missing.join(', '));
-      alert(`EmailJS 설정이 누락되었습니다: ${missing.join(', ')}\n\nSettings > Secrets 메뉴에서 위 환경 변수들을 설정해 주세요.`);
-      
-      // Stop sending state
-      setIsSending(false);
+      console.error('EmailJS Configuration missing in code.');
       return;
     }
 
