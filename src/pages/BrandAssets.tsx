@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Download } from 'lucide-react';
+import { ArrowLeft, Download, Compass, Brain, Zap, Target, Users, Sparkles, Navigation, Search } from 'lucide-react';
 import React from 'react';
 
 const COLORS = {
@@ -117,7 +117,7 @@ export default function BrandAssets() {
   };
 
   return (
-    <div className="min-h-screen bg-dark py-24 px-6 selection:bg-primary selection:text-white text-white">
+    <div className="min-h-screen bg-dark py-24 px-4 sm:px-6 selection:bg-primary selection:text-white text-white">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-12 text-left">
           <Link to="/" className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors font-bold uppercase tracking-widest text-xs">
@@ -145,12 +145,12 @@ export default function BrandAssets() {
               <div className="h-px bg-white/10 flex-grow" />
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="glass p-8 rounded-[3rem] border border-white/5 bg-white/[0.02]">
+              <div className="glass p-5 sm:p-8 rounded-[2rem] sm:rounded-[3rem] border border-white/5 bg-white/[0.02]">
                 <h3 className="text-[10px] font-black text-gray-400 mb-6 uppercase tracking-widest flex justify-between">
                   <span>Transparent</span>
                   <span className="text-white/20">SVG / PNG</span>
                 </h3>
-                <div className="aspect-square bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] rounded-2xl flex items-center justify-center p-12 mb-8 shadow-inner overflow-hidden">
+                <div className="aspect-square bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] rounded-2xl flex items-center justify-center p-6 sm:p-12 mb-8 shadow-inner overflow-hidden">
                   <div id="rb-t-svg">
                     <ReelbomLogo idPrefix="T-rb" className="w-48 h-48 drop-shadow-2xl" />
                   </div>
@@ -164,12 +164,12 @@ export default function BrandAssets() {
                   </button>
                 </div>
               </div>
-              <div className="glass p-8 rounded-[3rem] border border-white/5 bg-white/[0.02]">
+              <div className="glass p-5 sm:p-8 rounded-[2rem] sm:rounded-[3rem] border border-white/5 bg-white/[0.02]">
                 <h3 className="text-[10px] font-black text-primary mb-6 uppercase tracking-widest flex justify-between">
                   <span>Solid Identity</span>
                   <span className="text-primary italic">DEEP NAVY</span>
                 </h3>
-                <div className="aspect-square bg-[#020617] rounded-2xl flex items-center justify-center p-12 mb-8 shadow-2xl overflow-hidden">
+                <div className="aspect-square bg-[#020617] rounded-2xl flex items-center justify-center p-6 sm:p-12 mb-8 shadow-2xl overflow-hidden">
                   <div id="rb-s-svg">
                     <ReelbomLogo isSolid idPrefix="S-rb" className="w-48 h-48 drop-shadow-[0_0_20px_rgba(245,158,11,0.2)]" />
                   </div>
@@ -187,19 +187,130 @@ export default function BrandAssets() {
           </section>
 
           {/* Guiden Section */}
-          <section>
+          <section className="relative pt-12">
             <div className="flex items-center gap-4 mb-12">
               <div className="h-px bg-white/10 flex-grow" />
               <h2 className="text-2xl font-black italic text-secondary uppercase tracking-widest">Guiden</h2>
               <div className="h-px bg-white/10 flex-grow" />
             </div>
+
+            {/* Guiden Brand Story - Same Style as About Page */}
+            <div className="grid lg:grid-cols-2 gap-16 items-start text-left mb-20">
+              <div className="space-y-10">
+                <div>
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-secondary font-bold tracking-[0.4em] uppercase mb-4 text-[10px]"
+                  >
+                    ✨ 가이든 브랜드 스토리 (Guiden Story)
+                  </motion.p>
+                  <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-3xl md:text-5xl font-black font-sans tracking-tighter leading-[1.1] mb-6"
+                  >
+                    숏폼 생태계의 <br />
+                    전략적 나침반 <br/>
+                    <span className="text-secondary text-xl md:text-3xl font-bold tracking-tight">(The Strategic Compass)</span>
+                  </motion.h2>
+                  <p className="text-gray-400 text-base leading-relaxed space-y-4 break-keep font-medium">
+                    무수히 쏟아지는 콘텐츠 속에서 <br/>
+                    브랜드가 길을 잃지 않도록 이끄는 것이 가이든의 본질입니다. <br/><br/>
+                    단순한 대행을 넘어, 클라이언트의 비전을 확장(Expand)시키고 <br/>
+                    성공을 실현(Enable)하는 압도적인 실행력을 약속합니다.
+                  </p>
+                </div>
+
+                <div className="grid gap-4">
+                  {[
+                    { icon: Brain, title: '전략의 두뇌 (Strategy Brain)', desc: '가이든은 브랜드의 성장 궤도를 설계하고 뼈대를 잡는 하이엔드 컨설팅을 담당합니다.' },
+                    { icon: Compass, title: '명확한 방향 (Clear Direction)', desc: '데이터와 트렌드 분석을 통해 정확한 타겟에게 도달하는 리더십을 제시합니다.' },
+                    { icon: Sparkles, title: '든든한 파트너 (Trusted Partner)', desc: '브랜드 고유의 매력에 완벽하게 스며들어 가장 믿음직한 러닝메이트가 됩니다.' }
+                  ].map((item, idx) => (
+                    <motion.div
+                      key={item.title}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.1 }}
+                      className="flex items-start gap-4 glass p-5 rounded-2xl border border-white/5 bg-white/[0.01]"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0">
+                        <item.icon className="w-5 h-5 text-secondary" />
+                      </div>
+                      <div>
+                        <h4 className="font-black text-sm mb-1">{item.title}</h4>
+                        <p className="text-[11px] text-gray-400 font-bold leading-tight break-keep">{item.desc}</p>
+                      </div>
+                    </motion.div>
+                  )) }
+                </div>
+              </div>
+
+              <div className="space-y-8">
+                {/* Logo Design Story Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="p-8 md:p-10 rounded-[2.5rem] bg-secondary/5 border border-secondary/20 relative overflow-hidden group"
+                >
+                  <div className="flex flex-col sm:flex-row gap-8 items-center relative z-10">
+                    <div className="w-20 h-20 shrink-0 flex items-center justify-center glass rounded-2xl p-4 shadow-2xl relative transition-transform duration-500 group-hover:scale-110">
+                       <GuidenLogo className="w-full h-full drop-shadow-[0_0_15px_rgba(124,58,237,0.4)]" idPrefix="Story" />
+                    </div>
+                    <div>
+                      <h4 className="text-secondary font-black uppercase tracking-widest mb-3 text-sm">The Guiden Geometry <br/> [로고 스토리]</h4>
+                      <p className="text-xs text-gray-400 font-bold leading-relaxed break-keep">
+                        가이든의 로고는 <span className="text-white">나침반의 N/S/E/W 방위표</span>와 <span className="text-white">전략적 다이아몬드</span>를 결합했습니다. 
+                        가장자리 4개의 삼각형은 트렌드의 사방을 감시하는 '통찰'을, 정중앙의 코어는 브랜드가 나아가야 할 <span className="text-white">단 하나의 최적경로(Optimal Path)</span>를 상징합니다.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-secondary/10 rounded-full blur-3xl opacity-50" />
+                </motion.div>
+
+                {/* Slogans Card */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="glass p-6 sm:p-8 rounded-[2rem] sm:rounded-[2.5rem] border border-white/5 space-y-6"
+                >
+                  <h4 className="text-[10px] font-black text-gray-500 uppercase tracking-widest border-b border-white/5 pb-4">가이든 슬로건 (Guiden Slogans)</h4>
+                  <div className="space-y-4">
+                    <p className="text-sm font-black text-white/90">"당신의 브랜드를 이끌고, 비전을 확장합니다." <br/> (Guide your brand, Expand your vision.)</p>
+                    <div className="h-px bg-white/5 w-8" />
+                    <p className="text-xs font-bold text-gray-400 leading-relaxed">
+                      "숏폼의 흐름을 읽고, 브랜드의 내일을 잇다." <br/>
+                      "당신의 브랜드가 가야 할 단 하나의 길, 가이든."
+                    </p>
+                  </div>
+                </motion.div>
+                
+                {/* Synegry Alert */}
+                <div className="p-6 bg-white/[0.01] rounded-2xl border border-white/5 border-dashed flex items-center gap-4">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+                    <Sparkles className="w-4 h-4 text-primary" />
+                  </div>
+                  <p className="text-[10px] font-bold text-gray-500 leading-tight break-keep">
+                    가이든이 <span className="text-secondary font-black inline-block">전략(두뇌)</span>이라면, 릴봄은 그 전략을 폭발시키는 <span className="text-primary font-black inline-block">실행(심장)</span>입니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="glass p-8 rounded-[3rem] border border-white/5 bg-white/[0.02]">
+              <div className="glass p-5 sm:p-8 rounded-[2rem] sm:rounded-[3rem] border border-white/5 bg-white/[0.02]">
                 <h3 className="text-[10px] font-black text-gray-400 mb-6 uppercase tracking-widest flex justify-between">
                   <span>Pure Silver</span>
                   <span className="text-white/20">SVG / PNG</span>
                 </h3>
-                <div className="aspect-square bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] rounded-2xl flex items-center justify-center p-12 mb-8 shadow-inner overflow-hidden">
+                <div className="aspect-square bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] rounded-2xl flex items-center justify-center p-6 sm:p-12 mb-8 shadow-inner overflow-hidden">
                   <div id="gd-t-svg">
                     <GuidenLogo idPrefix="T-gd" className="w-48 h-48 drop-shadow-2xl" />
                   </div>
@@ -213,12 +324,12 @@ export default function BrandAssets() {
                   </button>
                 </div>
               </div>
-              <div className="glass p-8 rounded-[3rem] border border-white/5 bg-white/[0.02]">
+              <div className="glass p-5 sm:p-8 rounded-[2rem] sm:rounded-[3rem] border border-white/5 bg-white/[0.02]">
                 <h3 className="text-[10px] font-black text-secondary mb-6 uppercase tracking-widest flex justify-between">
                   <span>Solid Identity</span>
                   <span className="text-secondary italic">TRUSTED</span>
                 </h3>
-                <div className="aspect-square bg-[#020617] rounded-2xl flex items-center justify-center p-12 mb-8 shadow-2xl overflow-hidden">
+                <div className="aspect-square bg-[#020617] rounded-2xl flex items-center justify-center p-6 sm:p-12 mb-8 shadow-2xl overflow-hidden">
                   <div id="gd-s-svg">
                     <GuidenLogo isSolid idPrefix="S-gd" className="w-48 h-48 drop-shadow-[0_0_20px_rgba(139,92,246,0.2)]" />
                   </div>
@@ -236,7 +347,7 @@ export default function BrandAssets() {
           </section>
         </div>
 
-        <div className="mt-32 pt-12 border-t border-white/5 text-gray-600 font-bold uppercase tracking-widest italic text-[10px]">
+        <div className="mt-32 pt-12 border-t border-white/5 text-gray-600 font-bold uppercase tracking-widest text-[10px]">
           © 2026 REELBOM x GUIDEN. LUXURY IDENTITY SYSTEM COMPLETE.
         </div>
       </div>
