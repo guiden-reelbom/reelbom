@@ -270,7 +270,7 @@ export default function ContactForm() {
                 >
                   <option value="" disabled className="bg-dark text-white">예산 범위를 선택해 주세요</option>
                   <option value="50만원 이하" className="bg-dark text-white">50만원 이하</option>
-                  <option value="50~70만원" className="bg-dark text-white">50~70만원</option>
+                  <option value="50~80만원" className="bg-dark text-white">50~80만원</option>
                   <option value="80~100만원" className="bg-dark text-white">80~100만원</option>
                   <option value="100만원 이상" className="bg-dark text-white">100만원 이상</option>
                 </select>
