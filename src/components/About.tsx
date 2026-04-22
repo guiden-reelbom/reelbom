@@ -13,7 +13,7 @@ export default function About() {
         >
           <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-square border border-white/5">
              <img 
-               src="/reelbom_brandstory.png" 
+               src="https://postfiles.pstatic.net/MjAyNjA0MjJfMjQ1/MDAxNzc2ODU4NjQ0ODYy.j8bDQp5OdyDcu96JwntD3Mr0v8PUzZuG7tJPcaJLcyYg.-tJKkURHzehYjrHYFqgIkCK25ut08Qgolv9jXxeQrQgg.PNG/reelbom_brandstory.png?type=w773" 
                alt="REELBOM Brand Story" 
                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                referrerPolicy="no-referrer"

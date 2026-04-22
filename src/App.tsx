@@ -24,7 +24,7 @@ function Home() {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-dark/40 z-10" />
         <img 
-          src="/background.png" 
+          src="https://postfiles.pstatic.net/MjAyNjA0MjJfMTAx/MDAxNzc2ODU4NjM5MDUy.khDGMIK1u6eBH3isJsiY373zeJUz9X6tn4qquNjDQ54g.mS0xBrv4k5sicFddto0raNOD5Qjw6vdEKyMSaw7MoHAg.PNG/background.png?type=w773" 
           alt="REELBOM Atmosphere"
           className="w-full h-full object-cover opacity-60 fixed hover:scale-105 transition-transform duration-[20s] ease-linear"
           referrerPolicy="no-referrer"
