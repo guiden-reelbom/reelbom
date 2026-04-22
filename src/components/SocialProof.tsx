@@ -55,11 +55,11 @@ export default function SocialProof() {
            viewport={{ once: true }}
            className="mb-20"
         >
-          <h2 className="text-4xl md:text-7xl font-black font-display tracking-tighter mb-8 leading-tight">
-            숫자로 증명하는 <br /> 
-            <span className="text-primary italic">진짜 성과!</span>
+          <h2 className="text-4xl md:text-7xl font-black font-sans tracking-tighter mb-8 leading-tight">
+            데이터로 증명하는 <br /> 
+            <span className="text-primary">압도적 성과</span>
           </h2>
-          <p className="text-gray-400 text-sm md:text-base lg:text-xl max-w-3xl mx-auto text-outline leading-relaxed break-keep">
+          <p className="text-gray-400 text-sm md:text-base lg:text-xl max-w-3xl mx-auto leading-relaxed break-keep">
             매월 1억 회 이상의 누적 조회수를 기록하며 기하급수적 성장을 직접 증명하고 있습니다.
           </p>
         </motion.div>
@@ -71,22 +71,27 @@ export default function SocialProof() {
            className="mt-20 p-8 glass rounded-3xl flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left"
         >
           <div className="flex -space-x-4">
-             {[1,2,3,4].map(i => (
+             {[
+               { id: 'cafe', img: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=100&h=100' },
+               { id: 'beauty', img: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=100&h=100' },
+               { id: 'hospital', img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=100&h=100' },
+               { id: 'gym', img: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=100&h=100' }
+             ].map(partner => (
                <img 
-                 key={i} 
-                 src={`https://picsum.photos/seed/user${i}/100/100`} 
-                 alt="Client" 
-                 className="w-14 h-14 rounded-full border-2 border-dark"
+                 key={partner.id} 
+                 src={partner.img} 
+                 alt={`${partner.id} Partner`} 
+                 className="w-14 h-14 rounded-full border-2 border-dark object-cover"
                  referrerPolicy="no-referrer"
                />
              ))}
           </div>
           <div className="space-y-1">
-            <p className="text-secondary text-lg font-black tracking-tight">
-              실제 성과로 증명하는 릴스, 블로그 파트너십 (Reels & Blog Partnerships)
+            <p className="text-white text-lg font-black tracking-tight">
+              전문성으로 증명하는 릴스 · 블로그 파트너십
             </p>
             <p className="text-sm font-bold text-gray-400">
-              릴봄과 함께 폭발적인 성장을 경험하고 있는 수많은 브랜드들이 있습니다.
+              릴봄과 함께 임팩트 있는 성장을 경험하고 있는 수많은 브랜드들이 있습니다.
             </p>
           </div>
         </motion.div>

@@ -11,21 +11,21 @@ export default function About() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-square">
+          <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-square border border-white/5">
              <img 
-               src="https://picsum.photos/seed/agency/800/800" 
-               alt="GUIDEN Agency" 
-               className="w-full h-full object-cover"
+               src="/reelbom brandstory.png" 
+               alt="REELBOM Brand Story" 
+               className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                referrerPolicy="no-referrer"
              />
-             <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent" />
+             <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-60" />
           </div>
           {/* Decorative Elements */}
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
           <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl" />
           
           <div className="absolute bottom-10 left-10 right-10 glass p-8 rounded-3xl z-20">
-            <h3 className="text-2xl font-black mb-2 italic">시선의 가치 (Visual Value)</h3>
+            <h3 className="text-2xl font-black mb-2">시선의 가치 (Visual Value)</h3>
             <p className="text-sm font-bold text-white leading-relaxed drop-shadow-md">"당신의 가치가 비로소 보이기 시작하는 순간, 릴봄"</p>
           </div>
         </motion.div>
@@ -45,17 +45,20 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-black font-display tracking-tighter leading-[1.1] mb-8"
+              className="text-4xl md:text-6xl font-black font-sans tracking-tighter leading-[1.1] mb-8"
             >
               사람들의 시선이 <br />
-              <span className="text-primary italic">머무는 순간, 릴봄</span>
+              <span className="text-primary">머무는 순간, 릴봄</span>
             </motion.h2>
-            <p className="text-gray-400 text-lg leading-relaxed space-y-4 break-keep">
+            <p className="text-gray-400 text-lg leading-relaxed space-y-4 break-keep font-medium">
               <span className="block">
-                <strong>릴봄(Reelbom)</strong>은 숏폼의 <strong>'Reel'</strong>과 시선의 <strong>'봄'</strong>, 그리고 도약의 계절 <strong>'봄'</strong>의 결합입니다. 
+                릴봄(Reelbom)은 인스타그램 릴스(Reels)의 'Reel'과 시선의 '봄', <br className="hidden md:block" />
+                그리고 도약의 계절 '봄'의 결합입니다.
               </span>
-              <span className="block">
-                숏폼과 광고의 본질은 결국 <strong>'보여주는 것'</strong>입니다. 브랜드의 숨겨진 가치를 제대로 보게 만들고(Vision), 정체된 비즈니스에 가장 빠른 성장세(Spring)를 가져다줍니다.
+              <span className="block pt-2">
+                릴스와 같은 숏폼과 브랜드 광고의 본질은 결국 <strong>'보여주는 것'</strong>입니다. <br className="hidden md:block" />
+                브랜드의 숨겨진 가치를 제대로 보게 만들고(Vision), <br className="hidden md:block" />
+                정체된 비즈니스에 가장 빠른 성장세(Spring)를 가져다줍니다.
               </span>
             </p>
           </div>
@@ -65,11 +68,11 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/10 relative overflow-hidden group"
+            className="p-10 md:p-14 rounded-[3rem] bg-white/[0.02] border border-white/10 relative overflow-hidden group shadow-2xl"
           >
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 flex items-center justify-center glass rounded-2xl p-4 shadow-2xl relative">
-                 <svg viewBox="0 0 40 40" className="w-full h-full drop-shadow-[0_0_15px_rgba(245,158,11,0.4)]">
+            <div className="flex flex-col md:flex-row gap-10 items-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center glass rounded-3xl p-6 shadow-2xl relative transition-transform duration-500 group-hover:scale-110">
+                 <svg viewBox="0 0 40 40" className="w-full h-full drop-shadow-[0_0_20px_rgba(245,158,11,0.5)]">
                     <defs>
                       <linearGradient id="storyGrad" x1="0" y1="0" x2="1" y2="1">
                         <stop offset="0%" stopColor="#F59E0B" />
@@ -85,7 +88,7 @@ export default function About() {
                  </svg>
               </div>
               <div>
-                <h4 className="text-primary font-black italic uppercase tracking-widest mb-3">The Lens of Focus [로고 스토리]</h4>
+                <h4 className="text-primary font-black uppercase tracking-widest mb-3">The Lens of Focus [로고 스토리]</h4>
                 <p className="text-sm text-gray-400 font-bold leading-relaxed break-keep">
                   릴봄의 로고는 <span className="text-white">카메라 조리개와 재생 버튼</span>을 결합한 형태입니다. 
                   메탈릭 링은 시선을 프레임 안에 가두는 '안정감'을, 정중앙의 화이트 도트(Pupil)는 고객의 시선이 완벽하게 머무는 <span className="text-white">무결한 초점(Perfect Focus)</span>을 상징합니다.

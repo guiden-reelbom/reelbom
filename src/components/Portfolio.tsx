@@ -51,9 +51,9 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-4xl md:text-7xl font-black font-display tracking-tighter"
+              className="text-4xl md:text-7xl font-black font-sans tracking-tighter"
             >
-              성공을 만든 <br /> <span className="relative text-secondary italic leading-none inline-block">바이럴 스토리! </span>
+              시선의 가치를 <br /> <span className="relative text-secondary leading-none inline-block">증명한 프로젝트</span>
             </motion.h2>
           </div>
           <motion.button
