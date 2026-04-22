@@ -16,6 +16,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import BrandAssets from './pages/BrandAssets';
 import ScrollToTop from './components/ScrollToTop';
+import backgroundImg from './assets/background.png';
 
 function Home() {
   return (
@@ -24,7 +25,7 @@ function Home() {
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-dark/40 z-10" />
         <img 
-          src="/background.png" 
+          src={backgroundImg} 
           alt="REELBOM Atmosphere"
           className="w-full h-full object-cover opacity-60 fixed hover:scale-105 transition-transform duration-[20s] ease-linear"
           referrerPolicy="no-referrer"

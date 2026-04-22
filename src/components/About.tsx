@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Target, Users, Zap } from 'lucide-react';
+import brandStoryImg from '../assets/reelbom_brandstory.png';
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
         >
           <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-square border border-white/5">
              <img 
-               src="/reelbom_brandstory.png" 
+               src={brandStoryImg} 
                alt="REELBOM Brand Story" 
                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                referrerPolicy="no-referrer"
