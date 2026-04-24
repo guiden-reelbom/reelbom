@@ -3,31 +3,22 @@ import { ArrowRight, Play } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {/* Background Atmosphere - Animated Orbs Only */}
+    <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+      {/* Background Atmosphere */}
       <div className="absolute inset-0 z-0">
-        {/* Animated Orbs */}
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"
+        <motion.div 
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
+          transition={{ duration: 20, repeat: Infinity }}
+          className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10"
         />
-        <motion.div
-           animate={{
-            scale: [1.2, 1, 1.2],
-            x: [0, -100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px]"
+        <motion.div 
+          animate={{ scale: [1.2, 1, 1.2], rotate: [90, 0, 90] }}
+          transition={{ duration: 25, repeat: Infinity }}
+          className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[150px] -z-10"
         />
       </div>
 
-      <div className="relative z-20 container mx-auto px-6 text-center pt-32 md:pt-0">
+      <div className="relative z-20 container mx-auto px-6 text-center pt-24 pb-12 md:pt-0 md:pb-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,11 +62,11 @@ export default function Hero() {
             href="https://open.kakao.com/me/reelbom"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-10 py-5 bg-gradient-to-r from-secondary to-[#F26B7A] rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 border border-white/10"
+            className="group relative px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-secondary to-[#F26B7A] rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 border border-white/10 w-full max-w-[320px] md:max-w-none md:w-auto"
           >
             <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <span className="relative z-10 flex items-center font-bold tracking-widest uppercase text-white">
-              1:1 오픈채팅 문의하기 (Open Chat) <ArrowRight className="ml-2 w-5 h-5" />
+            <span className="relative z-10 flex items-center justify-center font-bold tracking-widest uppercase text-white text-sm md:text-base whitespace-nowrap">
+              1:1 오픈채팅 문의하기 <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
             </span>
           </a>
 

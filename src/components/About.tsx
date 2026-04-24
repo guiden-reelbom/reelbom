@@ -20,13 +20,14 @@ export default function About() {
              />
              <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-60" />
           </div>
+          
           {/* Decorative Elements */}
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/20 rounded-full blur-3xl" />
+          <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
           
-          <div className="absolute bottom-10 left-10 right-10 glass p-8 rounded-3xl z-20">
-            <h3 className="text-2xl font-black mb-2">시선의 가치 (Visual Value)</h3>
-            <p className="text-sm font-bold text-white leading-relaxed drop-shadow-md">"당신의 가치가 비로소 보이기 시작하는 순간, 릴봄"</p>
+          <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 glass p-6 md:p-8 rounded-3xl z-20">
+            <h3 className="text-xl md:text-2xl font-black mb-2 text-white">시선의 가치 (Visual Value)</h3>
+            <p className="text-xs md:text-sm font-bold text-white/90 leading-relaxed drop-shadow-md">"당신의 가치가 비로소 보이기 시작하는 순간, 릴봄"</p>
           </div>
         </motion.div>
 
@@ -68,7 +69,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-10 md:p-14 rounded-[3rem] bg-white/[0.02] border border-white/10 relative overflow-hidden group shadow-2xl"
+            className="p-8 md:p-14 rounded-[2.5rem] md:rounded-[3rem] bg-white/[0.01] border border-white/10 relative overflow-hidden group shadow-2xl"
           >
             <div className="flex flex-col md:flex-row gap-10 items-center">
               <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center glass rounded-3xl p-6 shadow-2xl relative transition-transform duration-500 group-hover:scale-110">
@@ -88,15 +89,16 @@ export default function About() {
                  </svg>
               </div>
               <div>
-                <h4 className="text-primary font-black uppercase tracking-widest mb-3">The Lens of Focus [로고 스토리]</h4>
+                <h4 className="text-primary font-black uppercase tracking-widest mb-3">The Lens of Focus <br className="sm:hidden" /> [로고 스토리]</h4>
                 <p className="text-sm text-gray-400 font-bold leading-relaxed break-keep">
                   릴봄의 로고는 <span className="text-white">카메라 조리개와 재생 버튼</span>을 결합한 형태입니다. 
                   메탈릭 링은 시선을 프레임 안에 가두는 '안정감'을, 정중앙의 화이트 도트(Pupil)는 고객의 시선이 완벽하게 머무는 <span className="text-white">무결한 초점(Perfect Focus)</span>을 상징합니다.
                 </p>
               </div>
             </div>
-            <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
           </motion.div>
+
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10" />
 
           <div className="grid gap-6">
             {[

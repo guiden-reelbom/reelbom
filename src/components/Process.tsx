@@ -35,7 +35,6 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="py-32 px-6 relative overflow-hidden bg-gradient-to-br from-dark via-dark to-primary/10">
-      {/* Decorative Orbs & Sparkles */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-[100px]" />
       <div className="absolute -left-20 bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px]" />
       

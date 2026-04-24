@@ -91,7 +91,7 @@ export default function SocialProof() {
               전문성으로 증명하는 릴스 · 블로그 파트너십
             </p>
             <p className="text-sm font-bold text-gray-400">
-              릴봄과 함께 임팩트 있는 성장을 경험하고 있는 수많은 브랜드들이 있습니다.
+              릴봄과 함께 임팩트 있는 성장을 경험하고 <br /> 있는 수많은 브랜드들이 있습니다.
             </p>
           </div>
         </motion.div>

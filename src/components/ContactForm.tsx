@@ -89,10 +89,6 @@ export default function ContactForm() {
 
   return (
     <section id="contact" className="py-32 px-6 bg-gradient-to-b from-dark to-black overflow-hidden relative">
-      {/* Decorative Blur */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 blur-[150px] -z-10 translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/10 blur-[150px] -z-10 -translate-x-1/2 translate-y-1/2" />
-
       <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-20 items-start">
         <div className="lg:col-span-2 sticky top-32">
           <motion.p
@@ -159,7 +155,7 @@ export default function ContactForm() {
               <p className="text-gray-400 text-lg mb-10">릴봄의 전문가가 확인 후 <br/> 빠른 시일 내에 연락드리겠습니다.</p>
               <button 
                 onClick={() => setIsSubmitted(false)}
-                className="px-8 py-3 glass rounded-full text-secondary font-bold hover:bg-secondary hover:text-white transition-all transform hover:scale-105"
+                className="px-8 py-3 rounded-full glass text-secondary font-bold hover:bg-secondary hover:text-white transition-all transform hover:scale-105 border border-secondary/30"
               >
                 추가 문의하기
               </button>
