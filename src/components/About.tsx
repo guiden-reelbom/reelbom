@@ -3,7 +3,7 @@ import { Target, Users, Zap } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6 relative overflow-hidden bg-black/20">
+    <section id="story" className="py-32 px-6 relative overflow-hidden bg-[#1e1635]/10">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -39,7 +39,7 @@ export default function About() {
               viewport={{ once: true }}
               className="text-secondary font-bold tracking-[0.4em] uppercase mb-4"
             >
-              ✨ 릴봄 브랜드 스토리 (Reelbom Story)
+              ✨ 브랜드 스토리 (Story)
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export default function About() {
             className="p-8 md:p-14 rounded-[2.5rem] md:rounded-[3rem] bg-white/[0.01] border border-white/10 relative overflow-hidden group shadow-2xl"
           >
             <div className="flex flex-col md:flex-row gap-10 items-center">
-              <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center glass rounded-3xl p-6 shadow-2xl relative transition-transform duration-500 group-hover:scale-110">
+              <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 flex items-center justify-center glass rounded-full p-6 shadow-2xl relative transition-transform duration-500 group-hover:scale-110">
                  <svg viewBox="0 0 40 40" className="w-full h-full drop-shadow-[0_0_20px_rgba(245,158,11,0.5)]">
                     <defs>
                       <linearGradient id="storyGrad" x1="0" y1="0" x2="1" y2="1">
@@ -92,7 +92,7 @@ export default function About() {
                 <h4 className="text-primary font-black uppercase tracking-widest mb-3">The Lens of Focus <br className="sm:hidden" /> [로고 스토리]</h4>
                 <p className="text-sm text-gray-400 font-bold leading-relaxed break-keep">
                   릴봄의 로고는 <span className="text-white">카메라 조리개와 재생 버튼</span>을 결합한 형태입니다. 
-                  메탈릭 링은 시선을 프레임 안에 가두는 '안정감'을, 정중앙의 화이트 도트(Pupil)는 고객의 시선이 완벽하게 머무는 <span className="text-white">무결한 초점(Perfect Focus)</span>을 상징합니다.
+                  프레임 안에 시선을 가두는 안정감, 고객의 시선이 머무는 정확한 초점, 그리고 콘텐츠가 움직이는 시작점을 상징합니다.
                 </p>
               </div>
             </div>
@@ -105,19 +105,19 @@ export default function About() {
               { 
                 icon: Zap, 
                 title: '시각적 가치 (Vision)', 
-                desc: '사람들의 시선이 머무는 콘텐츠로 브랜드의 가치를 선명하게 증명합니다.',
+                desc: '브랜드가 가진 매력을 시선이 멈추는 콘텐츠로 선명하게 보여줍니다.',
                 descEn: 'Creating the moment your value finally starts to be seen'
               },
               { 
                 icon: Target, 
                 title: '시기적 가치 (Spring)', 
-                desc: '얼어붙은 SNS 계정에 새로운 에너지와 도약의 기회를 불어넣습니다.',
+                desc: '정체된 계정에 새로운 흐름과 성장의 계기를 만듭니다.',
                 descEn: 'Bringing the fastest spring and growth to your business'
               },
               { 
                 icon: Users, 
                 title: '경험적 가치 (Experience)', 
-                desc: '"오, 볼만하네!" 고객이 결과물을 보고 감탄하는 긍정적 경험을 설계합니다.',
+                desc: '보는 사람이 “궁금하다”에서 “문의하고 싶다”로 이동하는 경험을 설계합니다.',
                 descEn: 'Designing results that make customers want to see and read more'
               },
             ].map((item, idx) => (
@@ -129,7 +129,7 @@ export default function About() {
                 transition={{ delay: idx * 0.1 }}
                 className="flex items-start gap-5 glass p-6 rounded-2xl hover:border-primary/30 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>

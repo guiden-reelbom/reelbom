@@ -9,12 +9,12 @@ export default function Hero() {
         <motion.div 
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 20, repeat: Infinity }}
-          className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -z-10"
+          className="absolute top-1/4 -left-20 w-[600px] h-[600px] bg-primary/30 rounded-full blur-[140px] -z-10 opacity-70"
         />
         <motion.div 
           animate={{ scale: [1.2, 1, 1.2], rotate: [90, 0, 90] }}
           transition={{ duration: 25, repeat: Infinity }}
-          className="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[150px] -z-10"
+          className="absolute bottom-1/4 -right-20 w-[700px] h-[700px] bg-secondary/20 rounded-full blur-[160px] -z-10 opacity-50"
         />
       </div>
 
@@ -62,11 +62,11 @@ export default function Hero() {
             href="https://open.kakao.com/me/reelbom"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative px-6 md:px-10 py-4 md:py-5 bg-gradient-to-r from-secondary to-[#F26B7A] rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 border border-white/10 w-full max-w-[320px] md:max-w-none md:w-auto"
+            className="group relative px-6 md:px-10 py-4 md:py-5 bg-secondary rounded-full overflow-hidden transition-all hover:scale-105 active:scale-95 border border-white/20 w-full max-w-[320px] md:max-w-none md:w-auto shadow-[0_20px_50px_-10px_rgba(242,107,122,0.4)]"
           >
-            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <span className="relative z-10 flex items-center justify-center font-bold tracking-widest uppercase text-white text-sm md:text-base whitespace-nowrap">
-              1:1 오픈채팅 문의하기 <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+            <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 pointer-events-none" />
+            <span className="relative z-10 flex items-center justify-center font-black tracking-widest uppercase text-white text-sm md:text-base whitespace-nowrap drop-shadow-sm">
+              1:1 상담 바로가기 <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 text-white stroke-[3px]" />
             </span>
           </a>
 
@@ -76,8 +76,8 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-white/80 hover:text-primary transition-colors group"
           >
-            <div className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 group-hover:border-primary group-hover:bg-primary/10 transition-all">
-              <Play className="fill-current w-4 h-4 ml-1" />
+            <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 border border-white/10 group-hover:border-primary/50 group-hover:bg-primary/20 transition-all shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+              <Play className="fill-current w-4 h-4 ml-1 text-white group-hover:text-primary transition-colors" />
             </div>
             <span className="font-bold tracking-widest uppercase text-sm">릴스 영상 보기 (View Reels)</span>
           </a>

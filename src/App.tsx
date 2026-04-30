@@ -19,17 +19,17 @@ import ScrollToTop from './components/ScrollToTop';
 
 function Home() {
   return (
-    <div className="relative min-h-screen selection:bg-primary selection:text-white bg-dark">
+    <div className="relative min-h-screen selection:bg-primary selection:text-white bg-[#1e1635]">
       {/* Global Cinematic Background */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-dark/40 z-10" />
+        <div className="absolute inset-0 bg-[#3a2070]/20 z-10" />
         <img 
           src="https://postfiles.pstatic.net/MjAyNjA0MjJfMTAx/MDAxNzc2ODU4NjM5MDUy.khDGMIK1u6eBH3isJsiY373zeJUz9X6tn4qquNjDQ54g.mS0xBrv4k5sicFddto0raNOD5Qjw6vdEKyMSaw7MoHAg.PNG/background.png?type=w773" 
           alt="REELBOM Atmosphere"
           className="w-full h-full object-cover opacity-60 fixed hover:scale-105 transition-transform duration-[20s] ease-linear"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-dark opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1e1635] via-transparent to-[#1e1635] opacity-50" />
       </div>
 
       <div className="relative z-10">

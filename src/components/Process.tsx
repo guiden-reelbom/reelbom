@@ -4,29 +4,29 @@ import { Camera, Palette, Cpu, BarChart3 } from 'lucide-react';
 const steps = [
   {
     icon: Camera,
-    title: '릴스/숏폼 제작, 스레드/블로그 대행',
-    description: '단순 제작을 넘어 트렌디한 감각과 알고리즘 최적화를 통해 압도적인 도달률과 브랜드 팬덤을 형성하는 올인원 콘텐츠 서비스를 제공합니다.',
+    title: '릴스/숏폼 제작',
+    description: '트렌드와 브랜드 톤을 반영해 시선을 멈추게 만드는 릴스와 숏폼을 제작합니다.\n\n기획안, 대본, 자막, 편집, 썸네일까지 업로드 가능한 형태로 완성합니다.',
     color: 'from-blue-500 to-cyan-400',
     badge: '트렌드 리딩',
   },
   {
     icon: Palette,
     title: '브랜딩',
-    description: '브랜드의 핵심 가치를 파악하여 일관된 톤앤매너와 시각적 정체성을 구축, 팬덤을 만드는 콘텐츠를 기획합니다.',
+    description: '계정의 방향성, 말투, 비주얼 톤을 정리해 브랜드가 한눈에 기억되는 콘텐츠 흐름을 만듭니다.\n\n단순한 영상 제작을 넘어 계정 전체의 인상을 설계합니다.',
     color: 'from-pink-500 to-rose-400',
     badge: '정체성 구축',
   },
   {
     icon: Cpu,
-    title: 'AI기술 활용',
-    description: '최신 AI 기술을 활용한 영상 제작 및 음성 삽입, 자동화 편집으로 제작 효율성을 높이고 타겟팅의 정확도를 극대화합니다.',
+    title: 'AI 기술 활용',
+    description: 'AI 음성, 자막 자동화, 편집 보조 기술을 활용해 제작 속도와 퀄리티를 함께 높입니다.\n\n반복 작업은 줄이고, 콘텐츠의 완성도에 더 집중합니다.',
     color: 'from-purple-500 to-indigo-400',
     badge: '스마트 자동화',
   },
   {
     icon: BarChart3,
     title: '성과 최적화 분석',
-    description: '조회수, 전환율 등 정밀한 데이터 대시보드를 통해 인사이트를 도출하고 다음 성장을 위한 전략을 설계합니다.',
+    description: '조회수, 저장, 반응, 문의 흐름을 분석해 다음 콘텐츠의 방향을 구체적으로 개선합니다.\n\n감으로 올리는 콘텐츠가 아니라 데이터로 성장하는 계정을 만듭니다.',
     color: 'from-orange-500 to-amber-400',
     badge: '성과 중심',
   },
@@ -34,7 +34,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-32 px-6 relative overflow-hidden bg-gradient-to-br from-dark via-dark to-primary/10">
+    <section id="service" className="py-32 px-6 relative overflow-hidden bg-[#1e1635]/30">
       <div className="absolute top-20 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-[100px]" />
       <div className="absolute -left-20 bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px]" />
       
@@ -56,10 +56,12 @@ export default function Process() {
               transition={{ delay: 0.2 }}
               className="text-4xl md:text-6xl font-black font-sans tracking-tighter leading-tight"
             >
-              압도적 결과를 만드는 <br /> 
-              <span className="text-primary">스마트 프로세스</span>
+              압도적 결과를 만드는 <br /> <span className="text-primary">스마트 숏폼 프로세스</span>
             </motion.h2>
-            <p className="text-gray-500 font-bold mt-4 uppercase tracking-[0.2em] text-xs">데이터와 크리에이티브의 완벽한 결합</p>
+            <p className="text-gray-500 font-bold mt-4 uppercase tracking-[0.05em] text-sm break-keep max-w-2xl">
+              감각적인 기획, 빠른 제작, 데이터 기반 개선까지 <br className="hidden md:block" />
+              브랜드 상황에 맞는 숏폼 운영 흐름을 설계합니다.
+            </p>
           </div>
         </div>
 
@@ -82,7 +84,7 @@ export default function Process() {
               </div>
 
               <div className="relative z-10 pt-4">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 border border-primary/20 glass transition-transform duration-500 group-hover:rotate-12">
+                <div className="w-14 h-14 rounded-full flex items-center justify-center mb-8 border border-primary/20 glass transition-transform duration-500 group-hover:rotate-12">
                   <step.icon className="w-7 h-7 text-primary" />
                 </div>
                 

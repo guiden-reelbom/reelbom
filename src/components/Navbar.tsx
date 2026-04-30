@@ -50,10 +50,10 @@ export default function Navbar() {
   );
 
   const navLinks = [
-    { name: '브랜드 스토리', enName: '(Story)', href: '/#about' },
-    { name: '서비스', enName: '(Service)', href: '/#process' },
+    { name: '브랜드 스토리', enName: '(Story)', href: '/#story' },
+    { name: '서비스', enName: '(Service)', href: '/#service' },
     { name: '포트폴리오', enName: '(Portfolio)', href: '/#portfolio' },
-    { name: '성과지표', enName: '(Stats)', href: '/#performance' },
+    { name: '릴봄의 관점', enName: '(Viewpoint)', href: '/#viewpoint' },
     { name: '문의하기', enName: '(Contact)', href: '/#contact' },
   ];
 

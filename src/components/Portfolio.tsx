@@ -34,7 +34,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-32 bg-black/40">
+    <section id="portfolio" className="py-32 bg-[#1e1635]/50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-20 gap-8 text-center md:text-left">
           <div>
@@ -53,8 +53,12 @@ export default function Portfolio() {
               transition={{ delay: 0.2 }}
               className="text-4xl md:text-7xl font-black font-sans tracking-tighter"
             >
-              시선의 가치를 <br /> <span className="relative text-secondary leading-none inline-block">증명한 프로젝트</span>
+              시선의 가치를 <br /> <span className="relative text-secondary leading-none inline-block">결과로 증명한 프로젝트</span>
             </motion.h2>
+            <p className="text-gray-400 font-bold mt-4 break-keep max-w-xl">
+              다양한 업종의 브랜드가 릴봄과 함께 <br className="hidden md:block" />
+              더 많은 시선과 반응을 만들어가고 있습니다.
+            </p>
           </div>
           <motion.button
             initial={{ opacity: 0, scale: 0.9 }}
@@ -105,14 +109,14 @@ export default function Portfolio() {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
-                  <button className="flex-1 py-3 bg-white text-black rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/90 transition-all text-xs tracking-widest uppercase">
-                    재생 (Play) <ExternalLink className="w-3 h-3" />
-                  </button>
-                  <button className="w-12 h-12 glass rounded-xl flex items-center justify-center hover:bg-white/10 transition-all">
-                    <Share2 className="w-4 h-4" />
-                  </button>
-                </div>
+                  <div className="flex gap-4">
+                    <button className="flex-1 py-3 bg-white text-black rounded-full font-bold flex items-center justify-center gap-2 hover:bg-white/90 transition-all text-xs tracking-widest uppercase">
+                      재생 (Play) <ExternalLink className="w-3 h-3" />
+                    </button>
+                    <button className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
+                      <Share2 className="w-4 h-4" />
+                    </button>
+                  </div>
               </div>
 
               {/* Bottom Label when not hovered */}
