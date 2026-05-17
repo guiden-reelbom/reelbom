@@ -74,13 +74,6 @@ export default function Portfolio() {
               더 많은 시선과 반응을 만들어가고 있습니다.
             </p>
           </div>
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="px-8 py-4 border border-secondary/30 rounded-full hover:bg-secondary hover:text-white transition-all font-bold tracking-widest uppercase text-sm shadow-[0_0_20px_rgba(242,107,122,0.2)] whitespace-nowrap"
-          >
-            전체 프로젝트 보기
-          </motion.button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
