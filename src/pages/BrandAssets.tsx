@@ -29,9 +29,8 @@ const ReelbomLogo = ({ isSolid = false, className = "", idPrefix = "trans" }: { 
   </svg>
 );
 
-// Guiden Fixed: No borders, Pure Silver + Gradient + No inward bleeding
+// Guiden Fixed: No borders, Pure Silver + Gradient + Rounded Diamond Core
 const GuidenLogo = ({ isSolid = false, className = "", idPrefix = "trans" }: { isSolid?: boolean, className?: string, idPrefix?: string }) => {
-  const maskId = `innerCircleMask${idPrefix}`;
   return (
     <svg viewBox="0 0 40 40" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -39,25 +38,16 @@ const GuidenLogo = ({ isSolid = false, className = "", idPrefix = "trans" }: { i
           <stop offset="0%" stopColor={COLORS.gold} />
           <stop offset="100%" stopColor={COLORS.violet} />
         </linearGradient>
-        {/* Clip path to prevent triangles from bleeding inside the circle */}
-        <clipPath id={maskId}>
-          <path d="M 0 0 H 40 V 40 H 0 Z M 20 20 m -16.5 0 a 16.5 16.5 0 1 1 33 0 a 16.5 16.5 0 1 1 -33 0" clipRule="evenodd" />
-        </clipPath>
       </defs>
       {isSolid && <circle cx="20" cy="20" r="17.4" fill={COLORS.navy} />}
       <circle cx="20" cy="20" r="16.5" stroke={COLORS.silver} strokeWidth="1.8" />
       
-      <g clipPath={`url(#${maskId})`}>
-        <g fill={COLORS.silver}>
-          <path d="M18.5 4.5 L21.5 4.5 L20 0.5 Z" />
-          <path d="M18.5 35.5 L21.5 35.5 L20 39.5 Z" />
-          <path d="M35.5 18.5 L35.5 21.5 L39.5 20 Z" />
-          <path d="M4.5 18.5 L4.5 21.5 L0.5 20 Z" />
-        </g>
-      </g>
+      {/* Guiden Gradient Arc - Consistent with Reelbom for unified brand identity */}
+      <path d="M 20 3.5 A 16.5 16.5 0 0 1 36.5 20" stroke={`url(#luxuryGradGD${idPrefix})`} strokeWidth="2.5" strokeLinecap="round" fill="none" />
 
       <g transform="rotate(45 20 20)">
-        <path d="M20 8 L28 20 L20 32 L12 20 Z" fill={`url(#luxuryGradGD${idPrefix})`} />
+        {/* Rounded Diamond Core - Softening the corners to match Reelbom's aesthetic */}
+        <rect x="11.5" y="11.5" width="17" height="17" rx="4" fill={`url(#luxuryGradGD${idPrefix})`} />
         <circle cx="20" cy="20" r="1.3" fill="white" />
       </g>
     </svg>
@@ -133,7 +123,7 @@ export default function BrandAssets() {
               "숨겨진 공간을 찾아내셨군요. 오늘 하루, 기분 좋은 직감이 당신을 이끌 거예요. <br/> 릴봄과 가이든의 비밀스러운 브랜드 자산을 공유합니다."
             </p>
           </div>
-          <p className="text-gray-600 font-bold uppercase tracking-[0.3em] text-[10px]">Pure Identity System / Resolution Focus (560px)</p>
+          <p className="text-gray-600 font-bold uppercase tracking-[0.3em] text-[10px]">Pure Identity System / CMYK Optimized for Print / Resolution Focus (560px)</p>
         </motion.div>
 
         <div className="space-y-32">
@@ -265,8 +255,8 @@ export default function BrandAssets() {
                     <div>
                       <h4 className="text-secondary font-black uppercase tracking-widest mb-3 text-sm">The Guiden Geometry <br/> [로고 스토리]</h4>
                       <p className="text-xs text-gray-400 font-bold leading-relaxed break-keep">
-                        가이든의 로고는 <span className="text-white">나침반의 N/S/E/W 방위표</span>와 <span className="text-white">전략적 다이아몬드</span>를 결합했습니다. 
-                        가장자리 4개의 삼각형은 트렌드의 사방을 감시하는 '통찰'을, 정중앙의 코어는 브랜드가 나아가야 할 <span className="text-white">단 하나의 최적경로(Optimal Path)</span>를 상징합니다.
+                        가이든의 로고는 <span className="text-white">나침반의 핵심 방위표</span>와 <span className="text-white">유연한 전략적 다이아몬드</span>를 결합했습니다. 
+                        릴봄과 통일된 <span className="text-white">라운드 마름모</span>는 부드러운 리더십을, 상단의 오렌지-바이올렛 아크는 트렌드를 선점하는 <span className="text-white">선구적 통찰(Insight)</span>을 상징합니다.
                       </p>
                     </div>
                   </div>
@@ -283,10 +273,9 @@ export default function BrandAssets() {
                 >
                   <h4 className="text-[10px] font-black text-gray-500 uppercase tracking-widest border-b border-white/5 pb-4">가이든 슬로건 (Guiden Slogans)</h4>
                   <div className="space-y-4">
-                    <p className="text-sm font-black text-white/90">"당신의 브랜드를 이끌고, 비전을 확장합니다." <br/> (Guide your brand, Expand your vision.)</p>
+                    <p className="text-sm font-black text-white/90">"트렌드를 읽고 브랜드를 이끄는 크리에이티브 가이드" <br/> (Reading trends, Guiding brands. Your Creative Guide)</p>
                     <div className="h-px bg-white/5 w-8" />
-                    <p className="text-xs font-bold text-gray-400 leading-relaxed">
-                      "숏폼의 흐름을 읽고, 브랜드의 내일을 잇다." <br/>
+                    <p className="text-xs font-bold text-gray-400 leading-relaxed italic">
                       "당신의 브랜드가 가야 할 단 하나의 길, 가이든."
                     </p>
                   </div>
@@ -347,8 +336,12 @@ export default function BrandAssets() {
           </section>
         </div>
 
-        <div className="mt-32 pt-12 border-t border-white/5 text-gray-600 font-bold uppercase tracking-widest text-[10px]">
-          © 2026 REELBOM x GUIDEN. LUXURY IDENTITY SYSTEM COMPLETE.
+        <div className="mt-32 pt-12 border-t border-white/5 text-gray-600 font-bold uppercase tracking-widest text-[10px] space-y-4">
+          <p>© 2026 REELBOM x GUIDEN. LUXURY IDENTITY SYSTEM COMPLETE.</p>
+          <p className="text-[8px] opacity-50 px-8 max-w-lg mx-auto">
+            Printer's Note: All colors are cross-checked for CMYK gamut safety. 
+            For professional print, please use the SVG versions which preserve vector paths and precision color mapping.
+          </p>
         </div>
       </div>
     </div>
