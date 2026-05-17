@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://reelbom.guiden.workers.dev/sitemap.xml
+Sitemap: https://reelbom.com/sitemap.xml

@@ -25,7 +25,7 @@ const projects = [
     title: '향기를 피부에 새기다',
     stats: { views: '2.5M', likes: '120K' },
     image: '/beauty.png',
-    link: 'https://youtube.com/shorts/a5OXwItVdgk?si=aH0rxrRiTSzYXJqm'
+    link: 'https://youtube.com/shorts/Ta9xwWe7KlM?si=YRbd_FQ6VkDEJL_V'
   },
   {
     id: 4,

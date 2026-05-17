@@ -2,5 +2,7 @@
   "name": "릴봄",
   "description": "트렌디한 브랜드를 위한 프리미엄 숏폼 릴스 에이전시, 릴봄(Reelbom)의 독특한 관점",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
