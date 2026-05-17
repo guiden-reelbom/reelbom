@@ -1,38 +1,52 @@
-import { motion } from 'motion/react';
-import { ExternalLink, Heart, MessageCircle, Share2 } from 'lucide-react';
+import { useState, MouseEvent } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ExternalLink, Heart, MessageCircle, Share2, Check } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    category: '병원 (Hospital)',
-    title: '신뢰 중심의 환자 유치 숏폼',
+    category: '브랜드 홍보 (Promotion)',
+    title: '숏폼, 감으로 하지마세요',
     stats: { views: '1.2M', likes: '45K' },
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=600&h=1000',
+    image: '/brand.png',
+    link: 'https://youtube.com/shorts/Jd-Mse4y3mE?si=-rgbvyZ-9PbBX9xr'
   },
   {
     id: 2,
     category: '웰니스 (Wellness)',
-    title: '마음 챙김: 일상 속의 명상',
+    title: '여기 입장하는 순간, 서울 맞나 싶음',
     stats: { views: '890K', likes: '32K' },
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600&h=1000',
+    image: '/well.png',
+    link: 'https://youtube.com/shorts/vspbSIgTvCw?si=XpxXgMgZrbX6axHS'
   },
   {
     id: 3,
     category: '뷰티 (Beauty)',
-    title: '광채 피부를 위한 1분 루틴',
+    title: '향기를 피부에 새기다',
     stats: { views: '2.5M', likes: '120K' },
-    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=600&h=1000',
+    image: '/beauty.png',
+    link: 'https://youtube.com/shorts/a5OXwItVdgk?si=aH0rxrRiTSzYXJqm'
   },
   {
     id: 4,
     category: '푸드 (Food)',
-    title: '입맛 돋우는 ASMR 레시피',
+    title: '대전 가족외식 여기 몰랐어요',
     stats: { views: '1.8M', likes: '98K' },
-    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=600&h=1000',
+    image: '/food.png',
+    link: 'https://youtube.com/shorts/RtM3xcrKVP8?si=wMUU1iIHFzWx3Va7'
   },
 ];
 
 export default function Portfolio() {
+  const [copiedId, setCopiedId] = useState<number | null>(null);
+
+  const handleShare = (e: MouseEvent, link: string, id: number) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(link).then(() => {
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
+    });
+  };
   return (
     <section id="portfolio" className="py-32 bg-[#1e1635]/50">
       <div className="max-w-7xl mx-auto px-6">
@@ -110,11 +124,33 @@ export default function Portfolio() {
                 </div>
 
                   <div className="flex gap-4">
-                    <button className="flex-1 py-3 bg-white text-black rounded-full font-bold flex items-center justify-center gap-2 hover:bg-white/90 transition-all text-xs tracking-widest uppercase">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-3 bg-white text-black rounded-full font-bold flex items-center justify-center gap-2 hover:bg-white/90 transition-all text-xs tracking-widest uppercase"
+                    >
                       재생 (Play) <ExternalLink className="w-3 h-3" />
-                    </button>
-                    <button className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
+                    </a>
+                    <button 
+                      onClick={(e) => handleShare(e, project.link, project.id)}
+                      className="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-all relative group/share"
+                    >
                       <Share2 className="w-4 h-4" />
+                      
+                      <AnimatePresence>
+                        {copiedId === project.id && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                            animate={{ opacity: 1, y: -45, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.9 }}
+                            className="absolute bg-primary text-white text-[10px] py-1.5 px-3 rounded-full whitespace-nowrap font-bold shadow-xl flex items-center gap-1.5"
+                          >
+                            <Check className="w-3 h-3" />
+                            링크 복사 완료!
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </button>
                   </div>
               </div>
